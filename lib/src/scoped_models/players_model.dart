@@ -3,13 +3,17 @@ import '../models/player.dart';
 
 class PlayersModel extends Model {
   List<Player> _players = [
-    Player('Caitlin'),
-    Player('Soren'),
+    Player('Caitlin', 0),
+    Player('Soren', 1),
   ];
 
   List<Player> get players => _players;
   int get longestListLength => _longestListLengh();
 
+  void add(int playerIndex, int number) {
+    _players[playerIndex].add = number;
+    notifyListeners();
+  }
 
   int _longestListLengh() {
     int _longestList = 0;

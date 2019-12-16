@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
         onPressed: () {
           showDialog(
             context: context,
-            builder: (BuildContext context) => AddDialog(player.name),
+            builder: (BuildContext context) => AddDialog(player),
           );
         },
         child: index < model.longestListLength

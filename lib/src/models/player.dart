@@ -1,10 +1,12 @@
 class Player {
+  final int _index;
   final String _name;
   List<int> _score = [];
 
-  Player(this._name);
+  Player(this._name, this._index);
 
   // Getters
+  int get index => _index;
   String get name => _name;
   List<int> get score => _score;
   int get numOfTallys => _score.length;
